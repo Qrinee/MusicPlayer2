@@ -1,0 +1,307 @@
+body{
+    margin: 0;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    transition: 1s all;
+}
+
+/* grid element */
+#holder{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+}
+
+#searchBar{
+    margin-bottom: 30px;
+}
+#image{
+    background-image: url(img/smutny.png);
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    margin: 0 0 0 2%;
+}
+
+#all{
+    margin: 0 0 0 20px;
+}
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    background-color: rgb(134, 134, 134);
+    cursor: pointer;
+    position: absolute;
+    bottom: 100px;
+}
+#iconVolume{
+    float: left;
+}
+input{
+    margin: auto;
+    display: block;
+}
+#pause{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(77, 77, 77, 0.215);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+input[type=text]{
+    font-family: 'Manrope', sans-serif;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    outline: 0;
+    padding: 10px;
+    margin-top: 10px;
+}
+#send, input[type=text], input[type=file], input::-webkit-file-upload-button, #add{
+    font-family: 'Manrope', sans-serif;
+    
+}
+input[type=text]:focus{
+    background-color: rgb(208, 208, 208);
+}
+input::-webkit-file-upload-button, #exit{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+#send:hover, input::-webkit-file-upload-button:hover, #add:hover, #exit:hover{
+    background-color: rgb(58, 58, 58);
+}
+
+#send{
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: white;
+    background-color: rgb(37, 37, 37);
+    font-size: 25px;
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 150px;
+    padding: 10px;
+    
+}
+
+
+#add{
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    padding: 20px;
+}
+#font{
+    padding-bottom: 40px;
+    margin: 0;
+    font-size: 40px;
+}
+.fa-pause{
+    font-size: 30px;
+}
+.fa-volume-high, .fa-volume-low, .fa-volume-xmark{
+    font-size: 20px;
+    margin: 0 10px 0 0;
+}
+#browsefile{
+    display: none;
+    background-color: rgb(66, 66, 66);
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 100px;
+    -webkit-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 29px -10px rgba(66, 68, 90, 1);
+    animation-name: easein;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+@keyframes easein{
+    0%{top: 30%; opacity: 0;}
+    100%{top: 50%; opacity: 100%;}
+}
+#vol{
+    text-align: center;
+    position: fixed;
+    right: 2%;
+    bottom: 30px;
+}
+
+#bottom{
+    display: none;
+}
+#bellow{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: flex-start
+}
+#duration{
+    position: fixed;
+    bottom: 80px;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+#artist, p{
+    margin: 0;
+}
+
+
+#exit{
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    outline: 0;
+    width: 50px;
+    border-radius: 0;
+}
+h1{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 50px;
+}
+.light{
+    color: rgb(22, 22, 22)!important;
+    background-color: rgb(242, 242, 242)!important;
+}
+.lightclickable:hover{
+    background-color: rgb(152, 152, 152)!important;
+}
+.lightclickable{
+    color: rgb(27, 27, 27)!important;
+    background-color: rgb(200, 200, 200)!important;
+}
+.lightitem{
+    color: rgb(27, 27, 27)!important;
+    background-color: rgb(200, 200, 200)!important;
+}
+button{
+    color: rgb(106, 106, 106);
+    background-color: rgba(240, 248, 255, 0);
+}
+*{
+    transition: 0.2s all;
+}
+#previoustrack, #nexttrack, #loop{
+    cursor: pointer;
+    position: fixed;
+    left: 47%;
+    bottom: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.fa-music{
+    color: rgb(255, 47, 47);
+}
+#previoustrack:hover, #nexttrack:hover, #loop:hover, #previoustrack:focus, #nexttrack:focus, #loop:focus{
+    background-color: rgba(128, 128, 128, 0.557);
+}
+#loop{
+    left: 44%;
+}
+.loop{
+    background-color: rgb(255, 47, 47);
+}
+
+#nexttrack{
+    left: 53%;
+}
+#mode{
+    padding: 10px;
+    font-size: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 50%;
+    outline: 0;
+    border: 3px solid rgba(72, 72, 72, 0.623);
+    cursor: pointer;
+}
+
+#mode:hover{
+    border: rgba(0, 0, 0, 0.559) solid 3px;
+}
+
+
+.item{
+    width: 300px;
+    background-color: rgb(49, 49, 49);
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    animation-name: item;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+@keyframes item{
+    0%{
+        opacity: 80%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.item:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+@media only screen and (max-width: 500px) {
+    h1{
+        font-size: 40px;
+    }
+    #mode{
+        top: 30px;
+        right: 20px;
+        font-size: 20px;
+    }
+}
